@@ -28,12 +28,12 @@ public class TestClass {
         WebElement searchbox = driver.findElement(By.name("q"));
 
         searchbox.clear();
-        searchbox.sendKeys("hola juan carlos");
+        searchbox.sendKeys("River campeón");
         searchbox.submit();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        assertEquals("hola juan carlos", driver.getTitle());
+        assertEquals("River", driver.getTitle());
     }
 
     @AfterEach
