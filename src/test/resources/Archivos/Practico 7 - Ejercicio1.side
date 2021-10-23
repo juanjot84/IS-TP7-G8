@@ -1,0 +1,153 @@
+{
+  "id": "b4e474a8-49ca-477d-a09e-ff70e2996b10",
+  "version": "2.0",
+  "name": "Practico 7",
+  "url": "https://www.musimundo.com",
+  "tests": [{
+    "id": "ebc1e607-6c73-414c-ad6f-4e98ac76e748",
+    "name": "Ejercicio 1",
+    "commands": [{
+      "id": "361180fe-149d-475d-bd58-e0d1a91449f7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fba6e873-4b05-4b7e-a265-d331ad17db2f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d03b8227-74f5-457f-ac90-7cb7dc9c5ce5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mus-header-user .mus-link1",
+      "targets": [
+        ["css=.mus-header-user .mus-link1", "css:finder"],
+        ["xpath=//a[contains(text(),'Ingresá  |  Registrate')]", "xpath:link"],
+        ["xpath=//div[@id='header']/div[2]/div/div/div/div[3]/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "458a2233-0054-430a-866a-c548a08976fc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.mus-header-user .mus-link1",
+      "targets": [
+        ["css=.mus-header-user .mus-link1", "css:finder"],
+        ["xpath=//a[contains(text(),'Ingresá  |  Registrate')]", "xpath:link"],
+        ["xpath=//div[@id='header']/div[2]/div/div/div/div[3]/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc8c55c8-c439-4941-9c8b-62bf2f6db627",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.mus-header-user .mus-link1",
+      "targets": [
+        ["css=.mus-header-user .mus-link1", "css:finder"],
+        ["xpath=//a[contains(text(),'Ingresá  |  Registrate')]", "xpath:link"],
+        ["xpath=//div[@id='header']/div[2]/div/div/div/div[3]/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05a8a367-90b2-449f-a183-0836a577e953",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_username",
+      "targets": [
+        ["id=j_username", "id"],
+        ["name=j_username", "name"],
+        ["css=#j_username", "css:finder"],
+        ["xpath=//input[@id='j_username']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4a047c0-8b24-420a-b213-cd0265233f55",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_username",
+      "targets": [
+        ["id=j_username", "id"],
+        ["name=j_username", "name"],
+        ["css=#j_username", "css:finder"],
+        ["xpath=//input[@id='j_username']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "ottxsobckjdjgxuflk@mrvpt.com"
+    }, {
+      "id": "563fc718-889a-48dd-be45-4cc2403bedeb",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_password",
+      "targets": [
+        ["id=j_password", "id"],
+        ["name=j_password", "name"],
+        ["css=#j_password", "css:finder"],
+        ["xpath=//input[@id='j_password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f83de5b-f61e-4de7-ab42-7a0889682a18",
+      "comment": "",
+      "command": "type",
+      "target": "id=j_password",
+      "targets": [
+        ["id=j_password", "id"],
+        ["name=j_password", "name"],
+        ["css=#j_password", "css:finder"],
+        ["xpath=//input[@id='j_password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123ABC"
+    }, {
+      "id": "8c5196a5-2773-4b77-ae4e-233c58e64106",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-actions:nth-child(2) > .positive",
+      "targets": [
+        ["css=.form-actions:nth-child(2) > .positive", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba5a2276-6bb4-434d-8e5e-1a4755fc8fd9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.mus-header-user .mus-he-account-intro",
+      "targets": [
+        ["css=.mus-header-user .mus-he-account-intro", "css:finder"],
+        ["xpath=//div[@id='header']/div[2]/div/div/div/div[3]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": "Hola, Juan"
+    }]
+  }],
+  "suites": [{
+    "id": "6aca7ff2-6a6a-4dc8-9976-5f908c010384",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ebc1e607-6c73-414c-ad6f-4e98ac76e748"]
+  }],
+  "urls": ["https://www.musimundo.com/"],
+  "plugins": []
+}

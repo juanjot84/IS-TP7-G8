@@ -7,10 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestClass {
 
     private WebDriver driver;
@@ -26,32 +31,28 @@ public class TestClass {
 
     @Test
     @Order(1)
-    public void testGooglePage() {
-        driver.get("https://www.google.com");
-        WebElement searchbox = driver.findElement(By.name("q"));
-
-        searchbox.clear();
-        searchbox.sendKeys("River campeón");
-        searchbox.submit();
-
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-        assertEquals("River campeón - Buscar con Google", driver.getTitle());
-    }
-
-    @Test
-    @Order(2)
     public void ejercicio1() {
-        driver.get("https://www.demoblaze.com/index.html");
-        driver.findElement(By.id("login2")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.id("loginusername")).click();
-        driver.findElement(By.id("loginusername")).sendKeys("xyjvoepfjvivxxbtgt@mrvpt.com");
-        driver.findElement(By.id("loginpassword")).click();
-        driver.findElement(By.id("loginpassword")).sendKeys("ABC123");
-        // Aca falla por que no puede hacer click en el boton login
-        driver.findElement(By.cssSelector("#logInModal .btn-primary")).click();
-        assertEquals("Welcome xyjvoepfjvivxxbtgt@mrvpt.com", driver.findElement(By.id("nameofuser")).getText());
+        driver.get("https://www.musimundo.com/");
+        driver.findElement(By.cssSelector(".mus-header-user .mus-link1")).click();
+        {
+            WebElement element = driver.findElement(By.cssSelector(".mus-header-user .mus-link1"));
+            Actions builder = new Actions(driver);
+            builder.moveToElement(element).perform();
+        }
+        // Se agrega un retardo porque si no ha cargado la página da error
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+        {
+            WebElement element = driver.findElement(By.tagName("body"));
+            Actions builder = new Actions(driver);
+            builder.moveToElement(element, 0, 0).perform();
+        }
+        driver.findElement(By.id("j_username")).click();
+        driver.findElement(By.id("j_username")).sendKeys("ottxsobckjdjgxuflk@mrvpt.com");
+        driver.findElement(By.id("j_password")).click();
+        driver.findElement(By.id("j_password")).sendKeys("123ABC");
+        driver.findElement(By.cssSelector(".form-actions:nth-child(2) > .positive")).click();
+        assertThat(driver.findElement(By.cssSelector(".mus-header-user .mus-he-account-intro")).getText(), is("Hola, Juan"));
     }
 
     @AfterEach
